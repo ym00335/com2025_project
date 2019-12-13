@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ym00335Com2025Coursework</title>
+    <title>PaintBlock</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <nav class="navbar navbar-expand-sm navbar-inverse">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">PaintBlock</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Browse</a></li>
+            <li><a href="contact">Contact Us</a></li>
+          </ul>
+        </div>
+</nav>
   </head>
 
   <body>
-    <p class="notice"><%- notice %></p>
-    <p class="alert"><%- alert %></p>
     <%= yield %>
   </body>
 </html>
