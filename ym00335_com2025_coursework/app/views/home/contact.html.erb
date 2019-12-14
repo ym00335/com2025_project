@@ -1,2 +1,15 @@
 <h1>Contact Us</h1>
 <p>Please fill out this form and explain your issue as throughly as possible.</p>
+<%= form_for :report do |f| %>
+            <p>
+                        <%= f.label :username, "Username or email" %><br>
+                        <%= f.text_field :username %>
+            </p>
+            <p>
+                        <%= f.label :description %><br>
+                        <%= f.text_area :description %>
+            </p>
+            <p>
+                        <%= f.submit "Send" %>
+            </p>
+<% end %>

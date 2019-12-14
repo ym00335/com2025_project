@@ -14,9 +14,23 @@
         <div>
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
-            <li><a href="#">Profile</a></li>
             <li><a href="#">Browse</a></li>
+            <% if user_signed_in? %>
+            <li><a href="#">Profile</a></li>
             <li><a href="contact">Contact Us</a></li>
+            <% end %>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="nav navbar-nav mr-auto">
+            <% if !user_signed_in? %>
+            <li><a href="users/sign_in">Login</a></li>
+            <% end %>
+
+            <% if user_signed_in? %>
+            <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+            <% end %>
           </ul>
         </div>
 </nav>
