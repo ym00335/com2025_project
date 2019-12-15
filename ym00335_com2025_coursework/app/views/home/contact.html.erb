@@ -1,15 +1,18 @@
 <h1> <%= t('.contitle') %></h1>
 <p> <%= t('.concomp') %></p>
-<%= form_for :report do |f| %>
-            <p>
-                        <%= f.label :username, "Username or email" %><br>
-                        <%= f.text_field :username %>
-            </p>
-            <p>
-                        <%= f.label :description %><br>
-                        <%= f.text_area :description %>
-            </p>
-            <p>
-                        <%= f.submit "Send" %>
-            </p>
+
+<%= form_tag request_contact_path, method: 'post' do %>
+  <%= label_tag :name, t('.name') %>
+  <%= text_field_tag :name, '', title: t('.enter_name'), size: 50 %>
+  <br>
+  <%= label_tag :email, t('.email') %>
+  <%= email_field_tag :email, '', title: t('.enter_email') %>
+  <br>
+  <%= label_tag :telephone, t('.telephone') %>
+  <%= telephone_field_tag :telephone, '', title: t('.enter_telephone') %>
+  <br>
+  <%= label_tag :message, t('.message') %>
+  <%= text_field_tag :message, '', title: t('.enter_message'), size: 100 %>
+  <br>
+  <%= submit_tag t('.submit') %>
 <% end %>

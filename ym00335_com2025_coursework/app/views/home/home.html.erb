@@ -1,4 +1,6 @@
 <p>
   <%= t('.greeting') %>
-  <button><a href="/posts">button</a></button>
+  <% if user_signed_in? %>
+  <button><a href="/posts/new">New Post</a></button>
+  <% end %>
 </p>

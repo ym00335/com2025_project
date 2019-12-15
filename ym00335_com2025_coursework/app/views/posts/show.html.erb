@@ -1,8 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @post.title %>
+  <%= image_tag @post.image.url %>
+</p>
+<p class="title-size">
+  <strong>
+    <%= @post.title %>
+  </strong>
+</p>
+
+<p>
+<strong> by: </strong> <%= @post.user.email %>
 </p>
 
 <p>
@@ -10,10 +18,7 @@
   <%= @post.description %>
 </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @post.image %>
-</p>
-
+<% if user_signed_in? && current_user.id == @post.user_id %>
 <%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
 <%= link_to 'Back', posts_path %>

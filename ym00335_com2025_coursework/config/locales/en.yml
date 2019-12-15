@@ -33,10 +33,6 @@ en:
   app_title: 'PaintBlock'
   app_description: 'Your place for art.'
 
-  request_contact:
-    no_email: 'You must supply an email address.'
-    email_sent: 'Thank you. We will be in touch within 2-3 business days.'
-
   home:
     home:
       title: 'PaintBlock'
@@ -44,3 +40,15 @@ en:
     contact:
       contitle: 'Contact Us!'
       concomp: 'Please fill in your details so we can help resolve your issue.'
+      name: 'Name:'
+      enter_name: 'Enter your name.'
+      email: 'Email:'
+      enter_email: 'Enter your email.'
+      telephone: 'Telephone:'
+      enter_telephone: 'Enter your telephone.'
+      message: 'Describe your issue as clearly as possible:'
+      enter_message: 'Enter your message.'
+      submit: 'Submit'
+    request_contact:
+      no_email: 'You must supply an email address.'
+      email_sent: 'Thank you. We will be in touch within 2-3 business days.'
