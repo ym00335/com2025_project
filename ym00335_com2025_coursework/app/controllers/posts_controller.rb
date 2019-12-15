@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    #@posts = Post.all.order('created_at_desc')
     @posts = Post.all
   end
 
@@ -14,6 +15,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
+    #@post = current_user.posts.build
     @post = Post.new
   end
 
@@ -69,6 +71,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :decription, :image)
+      params.require(:post).permit(:title, :description, :image)
     end
 end

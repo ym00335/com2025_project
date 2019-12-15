@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'home#home'
   get 'contact', to: 'home#contact'
-  get 'posts', to: 'home#post'
+  post 'request_contact', to: 'home#request_contact'
 
   resources :posts
   devise_for :users

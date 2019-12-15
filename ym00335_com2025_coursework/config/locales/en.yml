@@ -30,5 +30,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  app_title: PaintBlock
-  app_description: Your place for art.
+  app_title: 'PaintBlock'
+  app_description: 'Your place for art.'
+
+  request_contact:
+    no_email: 'You must supply an email address.'
+    email_sent: 'Thank you. We will be in touch within 2-3 business days.'
+
+  home:
+    home:
+      title: 'PaintBlock'
+      greeting: 'Welcome to PaintBlock, where you share your art and inspire each other.'
+    contact:
+      contitle: 'Contact Us!'
+      concomp: 'Please fill in your details so we can help resolve your issue.'
