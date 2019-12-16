@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<!-- Creates a list of posts, all of which checks if the user is signed in or not in order to edit their own posts.
+  If they aren't a user, they can only see the posts. -->
 <h1>Posts</h1>
 
 <div class="row">
@@ -14,7 +15,7 @@
           <%= link_to 'Show', post %>
           <% if user_signed_in? && current_user.id == post.user_id %> |
           <%= link_to 'Edit', edit_post_path(post) %> |
-          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
           </ul>
         </div>

@@ -1,6 +1,8 @@
+<!--Creating contact title and description.-->
 <h1> <%= t('.contitle') %></h1>
 <p> <%= t('.concomp') %></p>
 
+<!--Creates a form, though which the user is sent an email upon submitting the correct files.-->
 <%= form_tag request_contact_path, method: 'post' do %>
   <%= label_tag :name, t('.name') %>
   <%= text_field_tag :name, '', title: t('.enter_name'), size: 50 %>

@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<!-- Sets up the image post upon wanting to see more information, as well as displaying comments. The user can only comment once they've signed in.
+ If the user is also the author, they are allowed to edit the post from here. -->
 <p>
   <%= image_tag @post.image.url %>
 </p>
@@ -18,7 +19,35 @@
   <%= @post.description %>
 </p>
 
+<br>
+<h2>
+  <%= @post.comments.count %>
+  Comments:
+</h2>
+  <% @post.comments.each do |comment| %>
+  <p>
+    <b>Commenter:</b>
+    <%= comment.user.email %>
+  </p>
+
+  <p>
+    <%= comment.body %>
+  </p>
+  <% end %>
+<% if user_signed_in? %>
+  <h3> Add a comment: </h3>
+    <%= form_for([@post, @post.comments.build]) do |f| %>
+        <div class="field">
+            <%= f.text_area :body %>
+        </div>
+
+        <div class="actions">
+            <%= f.submit %>
+          </div>
+  <% end %>
+<% end %>
+
 <% if user_signed_in? && current_user.id == @post.user_id %>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <% end %>
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back', "/posts" %>

@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  title: First Painting
   description: MyText
-  image: MyString
+  image: public/uploads/post/image/1/thumb_art.jpg
+  user: one
 
 two:
-  title: MyString
+  title: Second Painting
   description: MyText
-  image: MyString
+  image: public/uploads/post/image/2/thumb_pixelart.jpg
+  user: two

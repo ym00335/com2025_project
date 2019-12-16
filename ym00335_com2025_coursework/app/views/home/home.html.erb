@@ -1,5 +1,7 @@
 <p>
+  <!--Gives a general greeting.-->
   <%= t('.greeting') %>
+  <!--Checks if the user is signed in, allowing them to create a new post of their own.-->
   <% if user_signed_in? %>
   <button><a href="/posts/new">New Post</a></button>
   <% end %>
